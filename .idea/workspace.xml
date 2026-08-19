@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c8eef56-839f-4233-a2d5-c3632838f906" name="Changes" comment="Adicionando todas as entidades principais">
-      <change afterPath="$PROJECT_DIR$/domain/Game.py" afterDir="false" />
+    <list default="true" id="6c8eef56-839f-4233-a2d5-c3632838f906" name="Changes" comment="criando main loop&#10;conectando classes menu e game">
+      <change afterPath="$PROJECT_DIR$/asset/background_sound.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asset/menu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/Const.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/Game.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/Game.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/domain/Menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/Menu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,21 +56,55 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.Game.executor": "Run",
+    "Python.Menu.executor": "Run",
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Adailton/Documents/ProjetoUninter",
+    "last_opened_file_path": "C:/Users/Adailton/Documents/ProjetoUninter/asset",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Adailton\Documents\ProjetoUninter\asset" />
       <recent name="C:\Users\Adailton\Documents\ProjetoUninter" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ProjetoUninter" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -109,7 +145,15 @@
       <option name="project" value="LOCAL" />
       <updated>1787105733548</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="criando main loop&#10;conectando classes menu e game">
+      <option name="closed" value="true" />
+      <created>1787107130950</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1787107130950</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +200,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="Adicionando todas as entidades principais" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adicionando todas as entidades principais" />
+    <MESSAGE value="criando main loop&#10;conectando classes menu e game" />
+    <option name="LAST_COMMIT_MESSAGE" value="criando main loop&#10;conectando classes menu e game" />
   </component>
 </project>
