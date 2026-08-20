@@ -1,7 +1,9 @@
 import pygame
 
+from domain import PedidoAleatorio
 from domain.Menu import Menu
-from domain.Const import WIN_WIDTH, WIN_HEIGHT
+from domain.Const import WIN_WIDTH, WIN_HEIGHT, MENU_OPTIONS
+
 
 class Game:
     def __init__(self):
@@ -10,8 +12,14 @@ class Game:
 
 
     def run(self):
-
         while True:
             menu = Menu(self.window)
-            menu.run()
-            pass
+            menu_return = menu.run()
+
+            if menu_return == MENU_OPTIONS[0]:
+                pedido_aleatorio = PedidoAleatorio()
+            elif menu_return == MENU_OPTIONS[2]:
+                pygame.quit()
+                quit()
+            else:
+                pass
