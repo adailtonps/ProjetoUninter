@@ -2,6 +2,7 @@ import pygame
 
 from database.Banco import Banco
 from domain.Avaliacao import Avaliacao
+from domain.Comandos import Comandos
 from domain.Historico import Historico
 from domain.Menu import Menu
 from domain.Const import WIN_WIDTH, WIN_HEIGHT, MENU_OPTIONS
@@ -32,8 +33,7 @@ class Game:
                 comida = pedido_aleatorio.run()
                 resultado = comida.run()
 
-                avalicao = Avaliacao(self.window, resultado, self.score, comida.ingredientes_pedido,
-                                     comida.ingredientes_do_jogador)
+                avalicao = Avaliacao(self.window, resultado, self.score, comida.ingredientes_pedido,comida.ingredientes_do_jogador)
 
                 avalicao.run()
                 self.banco.salvar_pontuacao(self.nome_jogador, self.score.pontuacao)
@@ -41,6 +41,10 @@ class Game:
                 historico = Historico(self.window, self.banco)
                 historico.run()
             elif menu_return == MENU_OPTIONS[2]:
+                comandos = Comandos(self.window)
+                comandos.run()
+
+            elif menu_return == MENU_OPTIONS[3]:
                 pygame.quit()
                 quit()
             else:
