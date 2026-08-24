@@ -123,6 +123,9 @@ celerybeat.pid
 # SageMath parsed files
 *.sage.py
 
+#database
+database/jogo.db
+
 # Environments
 .env
 venv
