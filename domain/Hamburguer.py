@@ -63,34 +63,60 @@ class Hamburguer:
                                 self.ingredientes_do_jogador.pop()
 
                     if event.key == pygame.K_RETURN:
+                        ingredientes_obrigatorios = ["PÃO"]
+
+                        pedido_avaliado = [
+                            ingrediente
+                            for ingrediente in self.ingredientes_pedido
+                            if ingrediente not in ingredientes_obrigatorios
+                        ]
+
+                        jogador_avaliado = [
+                            ingrediente
+                            for ingrediente in self.ingredientes_do_jogador
+                            if ingrediente not in ingredientes_obrigatorios
+                        ]
+
                         qnt_correta = 0
 
-                        for ingrediente in self.ingredientes_pedido:
-                            if ingrediente in self.ingredientes_do_jogador:
+                        for ingrediente in pedido_avaliado:
+                            if ingrediente in jogador_avaliado:
                                 qnt_correta += 1
 
-                        porcentagem = round((qnt_correta / len(self.ingredientes_pedido)) * 100)
+                        ingredientes_extras = 0
 
-                        self.ingredientes_corretos = "Ingredientes corretos:", qnt_correta
-                        self.ingredientes_do_pedido = "Ingredientes do pedido:", len(self.ingredientes_pedido)
-                        self.porcentagem_de_acerto = "Porcentagem:", porcentagem, "%"
+                        for ingrediente in jogador_avaliado:
+                            if ingrediente not in pedido_avaliado:
+                                ingredientes_extras += 1
+
+                        total_avaliado = len(pedido_avaliado) + ingredientes_extras
+
+                        if total_avaliado > 0:
+                            porcentagem = round((qnt_correta / total_avaliado) * 100)
+                        else:
+                            porcentagem = 0
+
+                        print("Ingredientes corretos:", qnt_correta)
+                        print("Ingredientes esperados:", len(pedido_avaliado))
+                        print("Ingredientes extras:", ingredientes_extras)
+                        print("Porcentagem:", porcentagem, "%")
 
                         if porcentagem == 100:
                             resultado = "Pedido correto!"
-                            self.score.pontuacao += 100
+                            self.score.pontuacao = 100
                             print("Score: ", self.score.pontuacao)
 
                         elif porcentagem >= 50:
                             resultado= "Pedido parcialmente correto!"
-                            self.score.pontuacao += 65
+                            self.score.pontuacao = 65
                             print("Score: ", self.score.pontuacao)
                         elif porcentagem > 0:
                             resultado = "Pedido bem abaixo do esperado!"
-                            self.score.pontuacao += 35
+                            self.score.pontuacao = 35
                             print("Score: ", self.score.pontuacao)
                         else:
                             resultado = "Pedido horrível!"
-                            self.score.pontuacao += 0
+                            self.score.pontuacao = 0
                             print("Score: ", self.score.pontuacao)
 
                         if event.type == pygame.QUIT:

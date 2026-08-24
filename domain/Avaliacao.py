@@ -52,11 +52,12 @@ class Avaliacao:
             (255, 0, 0)
         )
 
-        titulo = fonte.render(
-            "O pedido era:",
+        titulo_pedido = fonte.render(
+            "PEDIDO:",
             True,
             (255, 0, 0)
         )
+        titulo_jogador = fonte.render("VOCÊ COLOCOU", True, (255, 0, 0))
 
         while True:
             self.window.blit(imagem, (0, 0))
@@ -64,20 +65,39 @@ class Avaliacao:
             self.window.blit(resposta_pedido_okOrnot, (420, 55))
             self.window.blit(resposta_score, (420, 75))
             self.window.blit(resposta_acertos, (420, 95))
-            self.window.blit(titulo, (420, 125))
+            self.window.blit(titulo_pedido, (420, 125))
+            self.window.blit(titulo_jogador, (570, 125))
 
-            # Ingredientes em uma lista compacta
             for i, ingrediente in enumerate(self.ingredientes_pedido):
                 texto = fonte_ingredientes.render(
                     ingrediente,
                     True,
                     (255, 0, 0)
                 )
-
                 self.window.blit(
                     texto,
                     (420, 145 + i * 13)
                 )
+
+
+            for i, ingrediente in enumerate(self.ingredientes_do_jogador):
+                if ingrediente in self.ingredientes_pedido:
+                    cor = (0, 180, 0)
+                else:
+                    cor = (255, 0, 0)
+
+                texto = fonte_ingredientes.render(
+                    ingrediente,
+                    True,
+                    cor
+                )
+
+                self.window.blit(
+                    texto,
+                    (570, 145 + i * 13)
+                )
+
+
 
             pygame.display.flip()
 

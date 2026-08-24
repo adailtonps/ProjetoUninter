@@ -57,7 +57,7 @@ class PedidoAleatorio:
         "MOLHO DE TOMATE",
         "QUEIJO",
         "ALFACE",
-        "CAEBOLA",
+        "CEBOLA",
         "SALAME",
         "COGUMELO",
         "KETCHUP",
