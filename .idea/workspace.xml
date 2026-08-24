@@ -4,13 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c8eef56-839f-4233-a2d5-c3632838f906" name="Changes" comment="criando main loop&#10;conectando classes menu e game">
-      <change afterPath="$PROJECT_DIR$/asset/background_sound.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset/menu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/Const.py" afterDir="false" />
+    <list default="true" id="6c8eef56-839f-4233-a2d5-c3632838f906" name="Changes" comment="Pedido aleatorio foi concluido. Foram criados os construtores das classes de comida. imagens importadas">
+      <change afterPath="$PROJECT_DIR$/asset/cliente_balao.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asset/cliente_brava.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asset/cliente_desapontado.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asset/cliente_feliz.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asset/cliente_ok.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/Avaliacao.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/Historico.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/NomeJogador.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/domain/Game.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/Game.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/Menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/Menu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/Hamburguer.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/Hamburguer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/PedidoAleatorio.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/PedidoAleatorio.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/PedidoFeito.py" beforeDir="false" afterPath="$PROJECT_DIR$/database/Banco.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/Pizza.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/Pizza.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/Score.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/Score.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/Sopa.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/Sopa.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +37,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -40,7 +50,7 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/adailtonps/jogo_uninter&quot;,
+    &quot;url&quot;: &quot;https://github.com/adailtonps/ProjetoUninter&quot;,
     &quot;accountId&quot;: &quot;558f2013-c59e-481f-b8fa-aa841807d92b&quot;
   }
 }</component>
@@ -53,22 +63,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.Game.executor": "Run",
-    "Python.Menu.executor": "Run",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Adailton/Documents/ProjetoUninter/asset",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.Game.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Menu.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;#1 on testes&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Adailton/Documents/ProjetoUninter/asset&quot;,
+    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Adailton\Documents\ProjetoUninter\asset" />
@@ -153,7 +166,31 @@
       <option name="project" value="LOCAL" />
       <updated>1787107130950</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="foi criado asset folder, foi inserido os assets e criado o menu: backgroun, sound e fonts e as variaveis constantes">
+      <option name="closed" value="true" />
+      <created>1787112446952</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1787112446952</updated>
+    </task>
+    <task id="LOCAL-00006" summary="mudando as listas de ingredientes de pedido_aleatorio">
+      <option name="closed" value="true" />
+      <created>1787160200362</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1787160200362</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Pedido aleatorio foi concluido. Foram criados os construtores das classes de comida. imagens importadas">
+      <option name="closed" value="true" />
+      <created>1787196514295</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1787196514295</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,6 +238,20 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="Adicionando todas as entidades principais" />
     <MESSAGE value="criando main loop&#10;conectando classes menu e game" />
-    <option name="LAST_COMMIT_MESSAGE" value="criando main loop&#10;conectando classes menu e game" />
+    <MESSAGE value="foi criado asset folder, foi inserido os assets e criado o menu: backgroun, sound e fonts e as variaveis constantes" />
+    <MESSAGE value="mudando as listas de ingredientes de pedido_aleatorio" />
+    <MESSAGE value="Pedido aleatorio foi concluido. Foram criados os construtores das classes de comida. imagens importadas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pedido aleatorio foi concluido. Foram criados os construtores das classes de comida. imagens importadas" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/domain/PedidoAleatorio.py</url>
+          <line>85</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

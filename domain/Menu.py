@@ -3,7 +3,7 @@ from pygame.font import Font
 from pygame.rect import Rect
 from pygame.surface import Surface
 
-from domain.Const import WIN_WIDTH, COLOR_ORANGE, MENU_OPTIONS
+from domain.Const import WIN_WIDTH, COLOR_ORANGE, MENU_OPTIONS, COLOR_WHITE
 
 
 class Menu:
@@ -13,15 +13,19 @@ class Menu:
         self.rect = self.surf.get_rect(left=0, top=0)
 
     def run(self, ):
+        menu_option = 0
         pygame.mixer_music.load('./asset/background_sound.mp3')
         pygame.mixer_music.play(-1)
 
         while True:
+            # Desenhas as imagens
             self.window.blit(source=self.surf, dest=self.rect)
 
             for i in range(len(MENU_OPTIONS)):
-                self.menu_text(40, MENU_OPTIONS[i], COLOR_ORANGE, ((WIN_WIDTH / 2), 480 + 50 * i))
-
+                if i == menu_option:
+                    self.menu_text(40, MENU_OPTIONS[i], COLOR_WHITE, ((WIN_WIDTH / 2), 480 + 50 * i))
+                else:
+                    self.menu_text(40, MENU_OPTIONS[i], COLOR_ORANGE, ((WIN_WIDTH / 2), 480 + 50 * i))
             pygame.display.flip()
 
             # check for all events
@@ -29,6 +33,23 @@ class Menu:
                 if event.type == pygame.QUIT:
                     pygame.quit()  # close window
                     quit()  # end pygame
+
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_DOWN:  # tecla para abaixo
+                        if menu_option < len(MENU_OPTIONS) - 1:
+                            menu_option += 1
+                        else:
+                            menu_option = 0
+
+                    if event.key == pygame.K_UP:  # tecla para cima
+                        if menu_option > 0:
+                            menu_option -= 1
+                        else:
+                            menu_option = len(MENU_OPTIONS) - 1
+
+                    if event.key == pygame.K_RETURN:  # enter
+                        return MENU_OPTIONS[menu_option]
+
 
     # metodo que gera o texto escrito no menu
     def menu_text(self, text_size: int, text: str, text_color: tuple, text_center_pos: tuple):
