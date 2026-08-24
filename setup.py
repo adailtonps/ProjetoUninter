@@ -1,13 +1,19 @@
 from cx_Freeze import setup, Executable
-import os
 
-path = "./asset"
-asset_list = os.listdir(path)
-asset_list_completa = [os.path.join(path, asset).replace("\\", "/") for asset in asset_list]
-print(asset_list_completa)
+files = {
+    "packages": ["pygame", "domain"],
+    "include_files": [
+        "asset/",
+        "database/"
+    ]
+}
 
-executables = [Executable("main.py")]
-files = {"include_files":asset_list_completa, "packages":["pygame"]}
+executables = [
+    Executable(
+        "main.py",
+        target_name="main.exe"
+    )
+]
 
 setup(
     name="Overcooked",
